@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="bg-login">
+    <div class="overlay">
+      <div>
+        <div class="center padding-top-20">
+          <img src="assets/icon/logo.png" class="logo">
+        </div>
+
+        <div class="mg-top-5">
+          <h5 class="white center bold no-margin">
+            REPARTIDOR           
+          </h5>
+          <p class="white center light no-margin mg-top-20"> 
+            Ingresa tú cuenta para continuar
+          </p>
+        </div>
+        <div class="padding-40 mg-top-20">
+            <ion-item color="transparent" class="no-padding fontt">
+                <ion-label position="stacked white" class="white bold">Correo electrónico</ion-label>
+                <ion-input [(ngModel)]="correo" type="email" class="white"></ion-input>
+            </ion-item>
+            <ion-item color="transparent" class="padding-top-5 no-padding fontt">
+              <ion-label position="stacked white" class="white bold">Contraseña</ion-label>
+              <ion-input [(ngModel)]="contra" type="password" class="white"></ion-input>
+            </ion-item>
+            <div (click)="inicio()" class="btnlogin center bold padding-40 mg-top-20">
+              Entrar
+            </div>
+            <div (click)="registro()" class="white center light no-margin mg-top-10">
+              <ion-label class="white light">
+                ¿No tienes cuenta? 
+              </ion-label>
+            </div>
+        </div>          
+      </div>
+    </div>
+  </div>
+</ion-content>

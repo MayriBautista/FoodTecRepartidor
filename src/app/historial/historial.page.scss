@@ -1,0 +1,44 @@
+.new-background-color{
+    --background: #F06702;
+}
+
+.f-color{
+    --color: #a5a5a5;
+}
+
+.center {
+    text-align: center
+}
+
+.food {
+    color: #F06702;
+}
+
+.white {
+    color: #FFFCF2
+}
+
+.f-color-g{
+    --color: #525658;
+}
+//columnas tabla
+  .mCol{
+    min-width: 60px;
+    max-width: 90px;
+    padding: 5px;
+  }
+  .dCol{
+    min-width: 60px;
+    max-width: 90px;
+    padding: 5px;
+  }
+  .hCol{
+    min-width: 60px;
+    max-width: 100px;
+    padding: 5px;
+  }
+  .colGris{
+    background-color: rgb(196, 196, 196);
+    border-radius: 30%;
+    padding: 5px;
+  }

@@ -1,0 +1,218 @@
+<ion-menu side="start" menuId="first">
+  <ion-header>
+    <ion-toolbar color="food">
+      <ion-title>FoodTec</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon color="food" name="home"></ion-icon>
+        <div style="margin-left: 4%;">
+         <h6 color="warning"> Inicio</h6>
+        </div>
+      </ion-item>
+      <ion-item (click)="irA('/cuenta')">
+          <ion-icon color="food" name="person"></ion-icon>
+          <div style="margin-left: 4%;">
+           <h6 color="warning">Perfil</h6>
+          </div>
+      </ion-item>
+      <ion-item (click)="irA('/historial')">
+            <ion-icon color="food" name="clipboard"></ion-icon>
+            <div style="margin-left: 4%;">
+             <h6 color="warning">Historial</h6>
+            </div>
+      </ion-item>
+      <ion-item (click)="irA('/acerca')">
+          <ion-icon color="food" name="help"></ion-icon>
+          <div style="margin-left: 4%;">
+           <h6 color="warning">Acerca de nostros</h6>
+          </div>
+      </ion-item>
+     
+    </ion-list>
+    <ion-list>
+        <ion-item (click)="irA('/cambiarcontra')">
+            <div style="margin-left: 0%;">
+             <h6 style="font-size: 1dp;" color="warning">Cambiar Contraseña</h6>
+            </div>
+        </ion-item>
+        <ion-item (click)="irA('/cambiarnum')">
+            <div style="margin-left: 0%;">
+             <h6 style="font-size: 1dp;" color="warning">Cambiar Numero</h6>
+            </div>
+        </ion-item>
+        <ion-item (click)="irA('/eliminar')">
+            <div style="margin-left: 0%;">
+             <h6 style="font-size: 1dp;" color="warning">Desactivar Cuenta</h6>
+            </div>
+        </ion-item>
+    </ion-list>
+
+
+  </ion-content>
+
+  <ion-footer>
+      <ion-toolbar color="food">
+          <ion-item color="food" (click)="irA('/login')">
+              <ion-icon color="light" name="power"></ion-icon>
+              <div style="margin-left: 4%;">
+               <h6 color="warning">Cerrar Sesion</h6>
+              </div>
+          </ion-item>
+      </ion-toolbar>
+    </ion-footer>
+</ion-menu>
+
+
+
+<ion-header>
+<ion-toolbar color="food">
+    <ion-buttons slot="start">
+        <ion-button (click)="openFirst()">
+          <ion-icon name="menu" ></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  <ion-title>
+    Inicio
+  </ion-title>
+</ion-toolbar>
+</ion-header>
+
+
+
+<ion-router-outlet main>
+
+
+
+<ion-content style="text-align: center; top: 10%; padding-bottom: 10%">
+  
+  <ion-segment [(ngModel)]="menus" color="food" class="padding-top-30">
+    <ion-segment-button value="hoy">
+      <ion-icon name="calendar"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="proximos">
+      <ion-icon name="time"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="entregas">
+      <ion-icon name="clipboard"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="menus">
+    <ion-list *ngSwitchCase="'hoy'">
+      <ion-item>Hoy</ion-item>
+    <div>
+        <ion-img style="padding-left:20%; padding-right: 20%; margin-top: 5%; " src="assets/icon/logo.png"></ion-img>
+    </div>
+  
+    <div class="padding-top-10">
+  
+        <div class="no-padding padding-left-5 padding-right-5">
+          <ion-grid class="colGris">
+            <ion-row>
+              <ion-col>
+                <div><ion-img style="padding-left:30%; padding-right: 30%; margin-top: 10%; " src="assets/icon/plato.png"></ion-img>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="fontt"><ion-icon name="stopwatch"></ion-icon> 34' $18.00</div>
+              </ion-col>
+              <ion-col>
+                <div class="fontt"><ion-icon name="time"></ion-icon> 1:20 PM</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                  <div>Pedido: 1</div>
+                </ion-col>
+                <ion-col>
+                  <div class="fontt bold">PASTE REY</div>
+                </ion-col>
+                <ion-col class="font">
+                  <div>Recoger: Negrete <ion-icon name="pin"></ion-icon></div>
+                  <div>Entregar: Sistemas <ion-icon name="pin"></ion-icon></div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </ion-list>
+    <ion-list *ngSwitchCase="'proximos'">
+      <ion-item>Próximos</ion-item>
+
+      <div class="padding-top-10">
+  
+        <div class="no-padding padding-left-5 padding-right-5">
+          <ion-grid class="colGris">
+            <ion-row>
+              <ion-col>
+                <div><ion-img style="padding-left:30%; padding-right: 30%; margin-top: 10%; " src="assets/icon/plato.png"></ion-img>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="fontt"><ion-icon name="stopwatch"></ion-icon> 34' $18.00</div>
+              </ion-col>
+              <ion-col>
+                <div class="fontt"><ion-icon name="time"></ion-icon> 1:20 PM</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                  <div>Pedido: 1</div>
+                </ion-col>
+                <ion-col>
+                  <div class="fontt bold">PASTE REY</div>
+                </ion-col>
+                <ion-col class="font">
+                  <div>Recoger: Negrete <ion-icon name="pin"></ion-icon></div>
+                  <div>Entregar: Sistemas <ion-icon name="pin"></ion-icon></div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </ion-list>
+    <ion-list *ngSwitchCase="'entregas'">
+      <ion-item>Entregas</ion-item>
+      <div class="padding-top-10">
+  
+        <div class="no-padding padding-left-5 padding-right-5">
+          <ion-grid class="colGris">
+            <ion-row>
+              <ion-col>
+                <div><ion-img style="padding-left:30%; padding-right: 30%; margin-top: 10%; " src="assets/icon/plato.png"></ion-img>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="fontt"><ion-icon name="stopwatch"></ion-icon> 34' $18.00</div>
+              </ion-col>
+              <ion-col>
+                <div class="fontt"><ion-icon name="time"></ion-icon> 1:20 PM</div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                  <div>Pedido: 1</div>
+                  <div>
+                    <ion-icon name="checkmark" style="zoom:2.0;"></ion-icon>
+                  </div>                  
+                </ion-col>
+                <ion-col>
+                  <div class="fontt bold">PASTE REY</div>
+                </ion-col>
+                <ion-col class="font">
+                  <div>Recogió: Negrete <ion-icon name="pin"></ion-icon></div>
+                  <div>Entregó: Sistemas <ion-icon name="pin"></ion-icon></div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+    
+</ion-content>
+
+</ion-router-outlet>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start" class="white">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="white">Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-divider>
+    <ion-label>
+      Información de su cuenta
+    </ion-label>
+  </ion-item-divider>
+  <div class="padding-top-20">
+    <ion-item>
+      <ion-label position="stacked" class="f-color">
+        <ion-icon name="contact"></ion-icon>Nombre
+      </ion-label>
+      <ion-input type="text" placeholder="{{nombre}}"> </ion-input>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label position="stacked" class="f-color">
+        <ion-icon name="phone-portrait"></ion-icon>Número telefónico
+      </ion-label>
+      <ion-input type="text" disabled> {{telefono}} </ion-input>
+    </ion-item>
+
+    <ion-item class="padding-top-5">
+      <ion-label position="stacked" class="f-color-g">
+        <ion-icon name="mail"></ion-icon>Correo electrónico
+      </ion-label>
+      <ion-input class="f-color-g" type="email" disabled> {{email}} </ion-input>
+    </ion-item>
+  </div>
+
+  <div class="padding-top-30 center">
+    <ion-button shape="round" class="new-background-color">Actualizar</ion-button>
+  </div>
+</ion-content>

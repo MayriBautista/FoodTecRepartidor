@@ -1,0 +1,76 @@
+<ion-header color="white">
+  <ion-toolbar color="food">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="food">
+  <div style="text-align: center; padding-left: 5%; padding-right: 5%; padding-top: 5%;">
+
+    <ion-item color="food" style="margin-bottom: 2%;">
+      <ion-icon name="person"></ion-icon>
+      <div style="padding-left: 5%;">
+        <ion-input type="text" [(ngModel)]="nombre" placeholder="Nombre completo"></ion-input>
+      </div>
+    </ion-item>
+
+    <ion-item color="food" style="margin-bottom: 2%;">
+        <ion-icon name="phone-portrait"></ion-icon>
+        <div style="padding-left: 5%;">
+          <ion-input type="nomber" [(ngModel)]="telefono" placeholder="Número telefónico"></ion-input>
+        </div>
+    </ion-item>
+
+    <ion-item color="food" style="margin-bottom: 2%;">
+        <ion-icon name="mail"></ion-icon>
+        <div style="padding-left: 5%;">
+          <ion-input type="text" [(ngModel)]="correo" placeholder="Correo electrónico"></ion-input>
+        </div>
+    </ion-item>
+    
+    <ion-item color="food" style="margin-bottom: 2%;">
+        <ion-icon name="lock"></ion-icon>
+        <div style="padding-left: 5%;">
+          <ion-input type="password" [(ngModel)]="contra" placeholder="Contraseña"></ion-input>
+        </div>
+    </ion-item>
+
+    <ion-item color="food" style="margin-bottom: 2%;">
+        <ion-icon name="lock"></ion-icon>
+        <div style="padding-left: 5%;">
+          <ion-input type="password" [(ngModel)]="repiteContra" placeholder="Repite contraseña"></ion-input>
+        </div>
+    </ion-item>
+
+    <ion-item color="food" style="margin-bottom: 2%;">
+        <ion-icon name="medical" style="zoom:1.0;"></ion-icon>
+        <div style="padding-left: 5%;">
+          <ion-input type="text" [(ngModel)]="codigo" placeholder="Código de invitación"></ion-input>
+        </div>
+    </ion-item>
+
+    <ion-item color="food" style="margin-bottom: 2%;">
+        <ion-icon name="school"></ion-icon>        
+          <ion-label style="padding-left: 5%;">Institución educativa</ion-label>
+            <ion-select [(ngModel)]="institucion" value="nada" okText="Seleccionar" cancelText="Cancelar">
+              <ion-select-option value="tecno">ITDurango</ion-select-option>
+              <ion-select-option value="utd">UTDurango</ion-select-option>
+              <ion-select-option value="ujed">UJED</ion-select-option>
+            </ion-select>        
+    </ion-item>
+
+    <div color="food">
+        <ion-checkbox  [(ngModel)]="terminosCheck" style="margin-top: 3%; padding-top:2px;" color="food"></ion-checkbox>
+        <ion-label>Acepto los terminos y condiciones</ion-label>
+    </div>
+
+    <div class="padding-top-20">
+      <ion-button expand="full" shape="round" (click)="verificarDatos()" color="dark">Registrar</ion-button>
+    </div>
+    
+  </div>
+
+</ion-content>
