@@ -1,5 +1,7 @@
 {
   "name": "foodtecRepartidor",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
